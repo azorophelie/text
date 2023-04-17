@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+    <h1>FORMULAIRE D'INCRIPTION</h1>
+    <P>Veuillez remplir ce formulaire ci-dessous.<br>
+    Tous les champs sont obligatoires.</P>
+<form method="GET">
+<fieldset> <div>
+    <!--this is the first name and the last name-->
+    <label for="fname">Prénom:</label> <input type="text" name="fname" id="fname" required placeholder="Saisir votre prénom ici">&ensp;
+    <label for="lname">Nom:</label> <input type="text" name="lname" id="lname" required placeholder="Saisir votre nom ici">
+</div><br>
+<div>
+    <!--this is the age and the adress mail-->
+    <label for="age">Age:</label> &emsp;&nbsp; <input type="number" name="age" id="age" min="1" max="130" required placeholder="20">&nbsp;
+    <label for="email">Votre adresse e-mail:</label>&nbsp; <input type="email" id="email" name="email" required placeholder="user@mail.com">
+</div>
+<div><br>
+    <!--this is the gender-->
+    <input type="radio" id="sexe1" name="gender" value="sexe1" required> <label for="sexe1">Femme</label>
+    <input type="radio" id="sexe2" name="gender" value="sexe2"> <label for="sexe2">Homme</label>
+    <input type="radio" id="sexe3" name="gender" value="sexe3" > <label for="sexe3">Autre</label>
+</div><br> </fieldset>
+<fieldset> <div>
+    <!--this is the birthdate and nationality-->
+    <label for="birthday">Date de naissance:</label> <input type="date" id="birthday" name="birthday" max="2023-04-16" required>&nbsp;
+    <label for="nationality">Nationalité:</label>
+<select name="nationality" id="nationality">
+<optgroup label="Afrique">
+    <!--African countries-->
+    <option value="djibouti">Djiboutien.ne</option> 
+    <option value="marocco">Marocain.ne</option>
+    <option value="nigeria">Nigérien.ne</option>
+    <option value="uganda">Ougandais.e</option>
+    <option value="tanzania">Tanzanien.ne</option>
+</optgroup>
+<optgroup label="Amérique">
+    <!--American countries-->
+    <option value="brazil">Brésilien.ne</option> 
+    <option value="ecuador">Equatorien.ne</option>
+    <option value="haiti">Haitien.ne</option> 
+    <option value="mexico">Méxicain.ne</option>
+    <option value="peru">Péruvien.ne</option>
+</optgroup>
+<optgroup label="Asie">
+    <!--Asian countries-->
+    <option value="japan">Japonais.e</option>
+    <option value="pakistan">Pakistanais.e</option>
+    <option value="palestine">Palestinien.ne</option>
+    <option value="saoudia">Saoudien.ne</option>
+    <option value="southkorea">Sud-Coréen.ne</option>
+</optgroup>
+<optgroup label="Europe">
+    <!--European countries-->
+    <option value="albania">Albanais.e</option>
+    <option value="denmark">Danois.e</option>
+    <option value="estonia">Estonien.ne</option>
+    <option value="france" selected>Français.e</option>
+    <option value="italy">Italien.ne</option>
+</optgroup>
+<optgroup label="Océanie">
+    <!--Oceanian countries-->
+    <option value="australia">Australien.ne</option>
+    <option value="fiji">Fidjien.ne</option>
+    <option value="micronesia">Micronésien.ne</option>
+    <option value="newzealand">Néo-Zélandais.e</option>
+    <option value="tonga">Tongien.ne</option>
+</optgroup> </select><br><br> </div>
+<div>
+    <!--this is native country-->
+    <label for="nativecountry1">Pays de naissance:</label> <input type="text" id="nativecountry1" hidden>
+    <input type="checkbox" id="nativecountry" name="country" value="nativecountry" checked> <label for="nativecountry">France</label>
+    <input type="checkbox" id="nativecountry2" name="country" value="paysdenaissance2"> <label for="nativecountry2">Autre</label> 
+    <input type="text" id="precisez" name="precisez" placeholder="Précisez">
+    </div> </fieldset>
+<fieldset> <div>
+    <!--this is adress, zip code and city-->
+    <label for="adress">Adresse Postale:</label><br> <textarea id="adress" name="adress" rows="4" placeholder="numéro, rue et complément d'adresse" required></textarea>
+</div>
+<div>
+    <label for="zip">Code Postal:</label><br> <input type="text" id="zip" name="codepostal" required minlength="5" maxlength="5" placeholder="00000">
+</div>
+<div><br>
+    <label for="city">Ville:</label><br> <input type="text" id="city" name="ville" required placeholder="Saisir votre ville ici"> <br><br>
+</div> </fieldset>
+<fieldset>
+    <!--Your job-->
+    <label for="job">Votre profession:</label>
+<select name="métierexercé" id="job" required>
+    <option value="">Professeur.e</option>
+    <option value="web" selected>Développeur.se Web</option>
+    <option value="translate">Traducteur.rice</option>
+    <option value="engineer">Ingénieur.e</option>
+    <option value="translate">Traducteur.rice</option>
+    <option value="CM">Community Manager</option>
+    <option value="marketing">Directeur.rice Marketing</option>
+    <option value="accountant">Comptable</option>
+    <option value="Vente">Vendeur.se</option>
+    <option value="lawyer">Avocat.e</option>
+</select> </fieldset>
+<fieldset>
+    <!--security social, passport-->
+    <label for="securitysocial">Numéro de sécurité social:</label><br>
+    <input type="text" id="securitysocial" name="securitysocial" required minlength="13" maxlength="13" placeholder="0000000000000"> 
+    </fieldset>
+    <fieldset>
+    <label for="passportnumber">Numéro du passeport:</label><br>
+    <input type="text" id="passportnumber" name="passportnumber" required minlength="9" maxlength="9" placeholder="00CF00000"><br><br>
+    <label for="passportdate">Date de délivrance du passeport:</label>
+    <input type="date" id="passportdate" name="passportdate" max="2023-04-16" required>&nbsp;
+<div><br>
+    <label for="passportvalid">Date de validité du passeport:</label>
+    <input type="date" id="passportvalid" name="passportvalid" min="2023-04-18" required>&nbsp;
+</div> </fieldset><br>
+    <input type="submit" value="submit"> 
+    <input type="reset" value="reset">
+</form>
+</body>
+</html>
